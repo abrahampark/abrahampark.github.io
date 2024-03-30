@@ -40,6 +40,13 @@ body {
     background-color: gold;
   }
 
+  #section5 {
+    padding-top: 50px;
+    height: 500px;
+    color: #fff;
+    background-color: lightgray;
+  }
+
   h1 {
     font-size: 200px;
   }
@@ -73,4 +80,13 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+  }
+  
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: black !important;
+    background-color: white !important;
   }
