@@ -4,9 +4,12 @@ body {
   
   #section1 {
     padding-top: 50px;
-    height: 500px;
+    height: 1800px;
     color: #fff;
-    background-color: #1E88E5;
+    background-image: url(Egypt.jpeg);
+    background-attachment: fixed;
+    background-position: center;
+    zoom: 0.4;
   }
   
   #section2 {
@@ -36,17 +39,11 @@ body {
     color: #fff;
     background-color: #009688;
   }
-  
-  #section11 {
-    padding-top: 50px;
-    height: 500px;
-    color: rgba(26, 25, 25, 0.65);
-    background-color: black;
+
+  h1 {
+    font-size: 200px;
   }
-  
-  #section12 {
-    padding-top: 50px;
-    height: 700px;
-    color: #f0ffff;
-    background-color: white;
+
+  h2 {
+    font-size: 150px;
   }
