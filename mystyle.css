@@ -83,10 +83,10 @@ body {
   }
 
   .navbar li a, .navbar .navbar-brand {
-    color: #fff !important;
+    color: orange !important;
   }
   
   .navbar-nav li a:hover, .navbar-nav li.active a {
-    color: black !important;
-    background-color: white !important;
+    color: white !important;
+    background-color: grey !important;
   }

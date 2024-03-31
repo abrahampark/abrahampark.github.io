@@ -13,46 +13,52 @@
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="selection1">Abraham Park</a>
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Abraham Park</a>
+            </div>
+            <div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#section1">Home</a></li>
+                        <li><a href="#section2">About me</a></li>
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Travel <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#section31">Travel History</a></li>
+                                <li><a href="#section32">My 3 Favorite Spots</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#section4">MyWebApp</a></li>
+                        <li><a href="#section5">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div>
-          <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav">
-                <li><a href="#section1">Home</a></li>
-              <li><a href="#section2">About me</a></li>
-              <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Travel <span
-                    class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#section31">Travel History</a></li>
-                  <li><a href="#section32">My 3 Favorite Spots</a></li>
-                </ul>
-              </li>
-              <li><a href="#section4">MyWebApp</a></li>
-              <li><a href="#section5">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
     </nav>
-  
+
     <div id="section1" class="container-fluid">
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      <h1><center><b>Who I am</b></center></h1>
-      <h2><center>Everything about me and my travels</center></h2>
+        <h1>
+            <center><b>Who I am</b></center>
+        </h1>
+        <h2>
+            <center>Everything about me and my travels</center>
+        </h2>
     </div>
     <div id="section2" class="container-fluid">
-      <h3><center>About me</center></h3>
-      <img src="power.jpeg" alt="Power image" style="float: right;" class="right"> 
-      <h4>Hi, my name is Abraham Park</h4>
-      <h4>I am 21 years old, and I've lived in New Mexico for my whole life. </h4>
-      <h4>I am studying for a degree in Geography at the University of New Mexico.</h4>
+        <h3>
+            <center>About me</center>
+        </h3>
+        <img src="power.jpeg" alt="Power image" style="float: right;" class="right">
+        <h4>Hi, my name is Abraham Park</h4>
+        <h4>I am 21 years old, and I've lived in New Mexico for my whole life. </h4>
+        <h4>I am studying for a degree in Geography at the University of New Mexico.</h4>
         <h4>My main hobbies are working out, Powerlifting, traveling, movies, Basketball, and Football.</h4>
         <h4>Favorite Movie: The Dark Knight</h4>
         <h4>Favorite Song: Lose Yourself - Eminem</h4>
@@ -60,160 +66,170 @@
         <h4>Fun Fact: my second language is Lord of the Rings quotes.</h4>
     </div>
     <div id="section31" class="container-fluid">
-      <h3><center>The Places I've Traveled to</center></h3>
-      <div class="container">
-      <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-          <li data-target="#myCarousel" data-slide-to="3"></li>
-          <li data-target="#myCarousel" data-slide-to="4"></li>
-          <li data-target="#myCarousel" data-slide-to="5"></li>
-          <li data-target="#myCarousel" data-slide-to="6"></li>
-        </ol>
-    
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
+        <h3>
+            <center>The Places I've Traveled to</center>
+        </h3>
+        <div class="container">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                    <li data-target="#myCarousel" data-slide-to="5"></li>
+                    <li data-target="#myCarousel" data-slide-to="6"></li>
+                </ol>
 
-            <div class="item active">
-                <img src="germany.jpeg" alt="Germany" style="width:90%;" class="center">
-                <div class="carousel-caption">
-                  <h3>Germany</h3>
-                  <p>Pretty nice castle!</p>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+
+                    <div class="item active">
+                        <img src="germany.jpeg" alt="Germany" style="width:90%;" class="center">
+                        <div class="carousel-caption">
+                            <h3>Germany</h3>
+                            <p>Pretty nice castle!</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="banff2.jpeg" alt="Banff" style="width:100%;" class="center">
+                        <div class="carousel-caption">
+                            <h3>Banff National Park</h3>
+                            <p>Big Mountains!</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="hawaii2.jpeg" alt="Hawaii" style="width:50%;" class="center">
+                        <div class="carousel-caption">
+                            <h3>Hawaii</h3>
+                            <p>Pacific Paradise!</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="teton2.jpeg" alt="Grand Tetons" style="width:90%;" class="center">
+                        <div class="carousel-caption">
+                            <h3>Grand Tetons</h3>
+                            <p>Mountain Skyline!</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="grandcanyon.jpeg" alt="Grand Canyon" style="width:90%;" class="center">
+                        <div class="carousel-caption">
+                            <h3>Grand Canyon</h3>
+                            <p>A pretty big canyon wouldn't you say?</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="egypt2.jpeg" alt="Egypt" style="width:50%;" class="center">
+                        <div class="carousel-caption">
+                            <h3>Egypt</h3>
+                            <p>One of the seven wonders of the ancient world!</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="dc.jpeg" alt="Washington DC" style="width:50%;" class="center">
+                        <div class="carousel-caption">
+                            <h3>Washington DC</h3>
+                            <p>Abe Abe n Abe</p>
+                        </div>
+                    </div>
+
                 </div>
-              </div>
 
-          <div class="item">
-            <img src="banff2.jpeg" alt="Banff" style="width:100%;" class="center">
-            <div class="carousel-caption">
-              <h3>Banff National Park</h3>
-              <p>Big Mountains!</p>
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
-          </div>
-    
-          <div class="item">
-            <img src="hawaii2.jpeg" alt="Hawaii" style="width:50%;" class="center">
-            <div class="carousel-caption">
-              <h3>Hawaii</h3>
-              <p>Pacific Paradise!</p>
-            </div>
-          </div>
-        
-          <div class="item">
-            <img src="teton2.jpeg" alt="Grand Tetons" style="width:90%;" class="center">
-            <div class="carousel-caption">
-              <h3>Grand Tetons</h3>
-              <p>Mountain Skyline!</p>
-            </div>
-          </div>
-
-          <div class="item">
-            <img src="grandcanyon.jpeg" alt="Grand Canyon" style="width:90%;" class="center">
-            <div class="carousel-caption">
-              <h3>Grand Canyon</h3>
-              <p>A pretty big canyon wouldn't you say?</p>
-            </div>
-          </div>
-
-          <div class="item">
-            <img src="egypt2.jpeg" alt="Egypt" style="width:50%;" class="center">
-            <div class="carousel-caption">
-              <h3>Egypt</h3>
-              <p>One of the seven wonders of the ancient world!</p>
-            </div>
-          </div>
-
-          <div class="item">
-            <img src="dc.jpeg" alt="Washington DC" style="width:50%;" class="center">
-            <div class="carousel-caption">
-              <h3>Washington DC</h3>
-              <p>Abe Abe n Abe</p>
-            </div>
-          </div>
-      
         </div>
-    
-        <!-- Left and right controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right"></span>
-          <span class="sr-only">Next</span>
-        </a>
-        </div>
-      </div>
     </div>
     <div id="section32" class="container-fluid">
-      <h3><center>My 3 Favorite Destinations</center></h3><br>
-      <div class="container-fluid bg-3 text-center">
-        <div class="row">
-          <div class="col-sm-4">
-            <img src="Banff.jpeg" class="img-responsive margin" style="width:100%" alt="Image">
-            <h4>Banff National Park</h4><br>
-            <p>A very underrated National Park located in Alberta, Canada. Home of spectacular mountains, 
-                scenic lakes, lush wilderness, and scenic views taken straight out of a painting.</p>
-          </div>
-          <div class="col-sm-4">
-            <img src="Teton.jpeg" class="img-responsive margin" style="width:89%" alt="Image">
-            <h4>Grand Teton National Park</h4><br>
-            <p>South of Yellowstone, I like to say that this place is just several different spots to view the same mountain range,
-                but there is a good reason for that.
-            </p>
-          </div>
-          <div class="col-sm-4">
-            <img src="Hawaii.jpeg" class="img-responsive margin" style="width:100%" alt="Image">
-            <h4>Hawaii</h4><br>
-            <p>Do I need to say anything else?</p>
-          </div>
+        <h3>
+            <center>My 3 Favorite Destinations</center>
+        </h3><br>
+        <div class="container-fluid bg-3 text-center">
+            <div class="row">
+                <div class="col-sm-4">
+                    <img src="Banff.jpeg" class="img-responsive margin" style="width:100%" alt="Image">
+                    <h4>Banff National Park</h4><br>
+                    <p>A very underrated National Park located in Alberta, Canada. Home of spectacular mountains,
+                        scenic lakes, lush wilderness, and scenic views taken straight out of a painting.</p>
+                </div>
+                <div class="col-sm-4">
+                    <img src="Teton.jpeg" class="img-responsive margin" style="width:89%" alt="Image">
+                    <h4>Grand Teton National Park</h4><br>
+                    <p>South of Yellowstone, I like to say that this place is just several different spots to view the
+                        same mountain range,
+                        but there is a good reason for that.
+                    </p>
+                </div>
+                <div class="col-sm-4">
+                    <img src="Hawaii.jpeg" class="img-responsive margin" style="width:100%" alt="Image">
+                    <h4>Hawaii</h4><br>
+                    <p>Do I need to say anything else?</p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
     <div id="section4" class="container-fluid">
-        <h3><center>MyWebApp</center></h3>
+        <h3>
+            <center>MyWebApp</center>
+        </h3>
         <p>This is where my Final Project for GEOG-485L will be posted.</p>
         <p>This project is called Interactively Mapping the Worlds Volcanoes.</p>
-        <p>The main purpose of this project is to make a website where me and my group members 
-            will make a map of the worlds volcanoes. Including overlay options so the user 
-        can see which volcanoes are active, or what type each volcano is.</p>
-        <p>This application will also provide information about volcanoes, what each type of Volcano is, and the danger they pose.</p>
-      </div>
+        <p>The main purpose of this project is to make a website where me and my group members
+            will make a map of the worlds volcanoes. Including overlay options so the user
+            can see which volcanoes are active, or what type each volcano is.</p>
+        <p>This application will also provide information about volcanoes, what each type of Volcano is, and the danger
+            they pose.</p>
+    </div>
 
-      <div id="section5" class="container-fluid">
-        <h3><center>Contact me</center></h3>
+    <div id="section5" class="container-fluid">
+        <h3>
+            <center>Contact me</center>
+        </h3>
         <div class="container-fluid bg-grey">
             <div class="row">
-              <div class="col-sm-5">
-                <p>Contact me and I'll try to get back to you soon.</p>
-                <p><span class="glyphicon glyphicon-map-marker"></span> Albuquerque, NM</p>
-                <p><span class="glyphicon glyphicon-phone"></span> +01 5055539927</p>
-                <p><span class="glyphicon glyphicon-envelope"></span> abrahamcpark@gmail.com</p>
-              </div>
-              <div class="col-sm-7">
-                <div class="row">
-                  <div class="col-sm-6 form-group">
-                    <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-                  </div>
-                  <div class="col-sm-6 form-group">
-                    <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-                  </div>
+                <div class="col-sm-5">
+                    <p>Contact me and I'll try to get back to you soon.</p>
+                    <p><span class="glyphicon glyphicon-map-marker"></span> Albuquerque, NM</p>
+                    <p><span class="glyphicon glyphicon-phone"></span> +01 5055539927</p>
+                    <p><span class="glyphicon glyphicon-envelope"></span> abrahamcpark@gmail.com</p>
                 </div>
-                <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
-                <div class="row">
-                  <div class="col-sm-12 form-group">
-                    <button class="btn btn-default pull-right" type="submit">Send</button>
-                  </div>
+                <div class="col-sm-7">
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <input class="form-control" id="email" name="email" placeholder="Email" type="email"
+                                required>
+                        </div>
+                    </div>
+                    <textarea class="form-control" id="comments" name="comments" placeholder="Comment"
+                        rows="5"></textarea><br>
+                    <div class="row">
+                        <div class="col-sm-12 form-group">
+                            <button class="btn btn-default pull-right" type="submit">Send</button>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-      </div>
+        </div>
+    </div>
 
-  </body>
+</body>
 
 </html>
-
-
