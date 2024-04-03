@@ -6,7 +6,7 @@ body {
     padding-top: 50px;
     height: 1800px;
     color: #fff;
-    background-image: url(Egypt.jpeg);
+    background-image: url(data/Egypt.jpeg);
     background-attachment: fixed;
     background-position: center;
     zoom: 0.4;
