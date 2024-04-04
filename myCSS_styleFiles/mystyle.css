@@ -2,7 +2,7 @@ body {
     position: relative;
   }
   
-  #section1 {
+  #section1_home {
     padding-top: 50px;
     height: 1800px;
     color: #fff;
@@ -12,35 +12,35 @@ body {
     zoom: 0.4;
   }
   
-  #section2 {
+  #section2_aboutme {
     padding-top: 50px;
     height: 700px;
     color: #fff;
     background-color: orange;
   }
     
-  #section31 {
+  #section31_travel {
     padding-top: 50px;
     height: 700px;
     color: #fff;
     background-color: green;
   }
   
-  #section32 {
+  #section32_top3 {
     padding-top: 50px;
     height: 700px;
     color: #fff;
     background-color: blue;
   }
 
-  #section4 {
+  #section4_webapp {
     padding-top: 50px;
     height: 500px;
     color: #fff;
     background-color: gold;
   }
 
-  #section5 {
+  #section5_contact {
     padding-top: 50px;
     height: 500px;
     color: #fff;
