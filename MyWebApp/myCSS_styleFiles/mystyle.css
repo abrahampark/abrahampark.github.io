@@ -1,0 +1,137 @@
+.navbar li a, .navbar .navbar-brand {
+    color: darkgrey !important;
+    font-weight: bold;
+  }
+  
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: darkgrey !important;
+    background-color: grey !important;
+    font-weight: bold;
+  }
+
+  #map {
+    width: 100%;
+    height: 100%;
+  }
+
+  #section1_map {
+    padding-top: 50px;
+    height: 700px;
+    background-color: #CFCECE;
+  }
+
+  #section21_shield {
+    padding-top: 30px;
+    height: 325px;
+    background-color: #CFCECE;
+  }
+
+  #section22_cinder {
+    padding-top: 50px;
+    height: 375px;
+    background-color: #C3C4C4;
+  }
+
+  #section23_strato {
+    padding-top: 50px;
+    height: 425px;
+    background-color: #BDBDBD;
+  }
+
+  #section24_caldera {
+    padding-top: 50px;
+    height: 450px;
+    background-color: #B5B4B4;
+  }
+
+  #section25_field {
+    padding-top: 50px;
+    height: 450px;
+    background-color: #AFAFAF;
+  }
+
+  #section26_sub {
+    padding-top: 50px;
+    height: 375px;
+    background-color: #A5A5A5;
+  }
+
+  #section27_other {
+    padding-top: 50px;
+    height: 650px;
+    background-color: #9F9F9F;
+  }
+
+  #section3_danger {
+    padding-top: 50px;
+    height: 3500px;
+    background-color: #9A9A9A;
+  }
+
+  #section32_ref {
+    padding-top: 50px;
+    height: 700px;
+    background-color: #909090;
+  }
+
+  /* old legend
+  .info.legend {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    bottom: 40px;
+    left: 20px; 
+}
+
+.info.legend h4 {
+    margin-top: 0;
+    font-size: 16px;
+} */
+
+.my-legend {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  top: 475px;
+  left: 50px; 
+  z-index: 1000; 
+}
+
+.my-legend .legend-title {
+  text-align: left;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 90%;
+  }
+
+.my-legend .legend-scale ul {
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 0;
+  float: left;
+  list-style: none;
+  }
+
+.my-legend .legend-scale ul li {
+  font-size: 80%;
+  list-style: none;
+  margin-left: 0;
+  line-height: 18px;
+  margin-bottom: 2px;
+  }
+
+.my-legend ul.legend-labels li span {
+  display: block;
+  float: left;
+  height: 16px;
+  width: 30px;
+  margin-right: 5px;
+  margin-left: 0;
+  border: 1px solid #999;
+  }
+
+.my-legend a {
+  color: #777;
+  }
+  

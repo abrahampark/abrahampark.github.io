@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <base target="_top">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Status</title>
+        <link rel="icon" type="image/x-icon" href="data/images/HTML/icon.ico">
+        <link rel="stylesheet" href="JS_CSS_downloaded_libraries/3.4.1_css_bootstrap.min.css" />
+      <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+		integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" /> -->
+       <link rel="stylesheet" href="JS_CSS_downloaded_libraries/1.9.4_dist_leaflet.css"/>
+        <link rel="stylesheet" href="myCSS_styleFiles/mystyle.css" />
+        <!--<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"/> -->
+        <link rel="stylesheet" href="JS_CSS_downloaded_libraries/1.6.0_dist_leaflet.css" />
+        <!--<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script> -->
+        <script src="JS_CSS_downloaded_libraries/1.6.0_dist_leaflet.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.easybutton/2.4.0/easy-button.js"></script>
+        <script src="JS_CSS_downloaded_libraries/3.4.1_jquery.min.js"></script>
+        <script src="JS_CSS_downloaded_libraries/3.4.1_js_bootstrap.min.js"></script>
+        <!-- <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+		integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script> -->
+       <script src="JS_CSS_downloaded_libraries/1.9.4_dist_leaflet.js"></script> 
+       <script src="JS_CSS_downloaded_libraries/volcanicdata.js"></script> 
+    </head>
+
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Interactively Mapping the World's Volcanoes</a>
+                </div>
+                <div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#section1_map">Volcanic Map</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Volcano Info <span
+                                    class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#section21_shield">Shield Volcano</a></li>
+                                    <li><a href="#section22_cinder">Cinder Cone</a></li>
+                                    <li><a href="#section23_strato">Stratovolcano</a></li>
+                                    <li><a href="#section24_caldera">Caldera</a></li>
+                                    <li><a href="#section25_field">Volcanic Field</a></li>
+                                    <li><a href="#section26_sub">Submarine VOlcano</a></li>
+                                    <li><a href="#section27_other">Other</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#section3_danger">Volcanic Danger</a></li>
+                            <li><a href="#section32_ref">References</a></li>
+                            <li><a href="#section4" id="openModalLink">About</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var modal = document.getElementById("myModal");
+        
+                var openModalLink = document.getElementById("openModalLink");
+        
+                openModalLink.addEventListener("click", function(event) {
+                    event.preventDefault();
+        
+                    $(modal).modal("show");
+                });
+            });
+        </script>
+        
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">About</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>This web maps shows the world volcanoes. It aims to inform about the type and activity level of each one mapped. 
+			It is for anyone interested in volcanoes and where they exist, as well as to inform populations about potential risks.</p>
+                        <h4>About the team</h4>
+			    <p>Abraham Park (abrahamcpark@gmail.com) <a href="https://abrahampark.github.io" target="_blank">Website</a></p>
+			    <p>Aaron Spanyers <a href="https://github.com/a5pan" target="_blank">Github</a></p>
+			<h4>Project Advisor</h4>
+			    <p>Dr. Liping Yang <a href="https://www.lipingyang.org/" target="_blank">Website</a></p>
+            <h4>Acknowledgements</h4>
+            <p>Image caption: <a href="https://www.w3schools.com/tags/tag_figcaption.asp" target="_blank">W3 Tutorial</a></p>
+            <p>Modal Plugin: <a href="https://www.w3schools.com/bootstrap/bootstrap_modal.asp" target="_blank">W3 Tutorial</a></p>
+            <p>Volcanic data used: <a href="https://www.kaggle.com/datasets/ramjasmaurya/volcanoes-on-earth-in-2021" target="_blank">Kaggle</a></p>
+            <p>Tab Icon: <a href="https://www.pngall.com/volcano-png/download/18159" target="_blank">PNG Download</a></p>
+            <p>Converting CSV to js: <a href="http://geojson.io/" target="_blank">geojson</a></p>
+            <p>Opening link in new tab: <a href="https://www.freecodecamp.org/news/how-to-use-html-to-open-link-in-new-tab/" target="_blank">freecodecamp</a></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="section1_map" class="container-fluid">
+
+
+             <!-- Dr. Yand added START -->
+             <div class="btn-group">
+                <!-- <button type="button" id="volcano_Type" value= "1" class="btn btn-primary active" aria-pressed="true">Type</button>
+                <button type="button" id="volcano_Status"  value= "2" class="btn btn-danger">Status</button>
+                <button type="button" id="volcano_Elevatoin"  value= "3" class="btn btn-info">Elevation</button> -->
+                <a href="index.html"> <button type="button" id="volcano_Type" value= "1" class="btn btn-primary" >Type</button> </a>
+                <a href="index_status.html">   <button type="button" id="volcano_Status"  value= "2" class="btn btn-danger active" aria-pressed="true">Status</button>  </a>
+                <a href="index_elevation.html">   <button type="button" id="volcano_Elevatoin"  value= "3" class="btn btn-info">Elevation</button>  </a>
+                <!-- ref here for more button color in bootstrap: https://getbootstrap.com/docs/4.0/components/buttons/ -->
+
+
+               
+        
+            </div>
+  
+        <!-- Dr. Yand added END -->
+            <div id='map'></div>
+            <div class='my-legend'>
+                <div class='legend-title'>Volcanic Status</div>
+                <div class='legend-scale'>
+                  <ul class='legend-labels'>
+                    <li><span style='background:red;'></span>Historical</li>
+                    <li><span style='background:black;'></span>Holocene</li>
+                    <li><span style='background:orange;'></span>Radiocarbon</li>
+                    <li><span style='background:yellow;'></span>Fumarolic</li>
+                    <li><span style='background:green;'></span>Other</li>
+                    <li><span style='background:grey;'></span>Unknown</li>
+                  </ul>
+                </div>
+                </div>
+            <!-- <script type="text/javascript" src="myJS_scripts/mymap.js"></script> -->
+            <script type="text/javascript" src="myJS_scripts/mymap_Status.js"></script>
+                        <!-- added by Dr. Yang -->
+
+        </div>
+
+        <div id="section21_shield" class="container-fluid">
+<h1>Shield Volcano</h1>
+<figure style="float: right;" class="right">
+    <img src="data/images/HTML/shield.jpeg" alt="Mauna Kea, Hawaii" width="500">
+    <figcaption>Mauna Kea, Hawaii</figcaption>
+</figure>
+        <p><b>Volcanoes associated with Shield Volcano: Fissure Vents</b></p> <br>
+		<p>Shield volcanoes are characterized by their broad, gently sloping profile, resembling a warrior's shield lying on 
+            the ground. They are primarily built from low-viscosity basaltic lava flows, which travel long distances before 
+            solidifying, creating the wide, shallow slopes whcih give the volcanoes their distinctive shield-like shape. Eruptions from shield volcanoes are generally non-explosive, with
+             lava flowing steadily from fissures or central vents. Examples include Mauna Loa and Mauna Kea in Hawaii, which 
+             were formed by hotspot activity.</p>
+        </div>
+
+        <div id="section22_cinder" class="container-fluid">
+           <!-- <img src="data/cinder.jpeg" alt="Power image" style="float: right;" class="right" width="500"> -->
+           <figure style="float: right;" class="right">
+            <img src="data/images/HTML/cinder.png" alt="Eve Cone, Canada" width="500">
+            <figcaption> Paricutin, Mexico</figcaption>
+        </figure>
+		<h1>Cinder Cone</h1>
+        <p><b>Volcanoes associated with Cinder Cone: Scoria Cone and Pyroclastic Cone</b></p> <br>
+		<p>Cinder cones are the simplest type of volcano, often appearing as steep conical hills with a bowl-shaped crater at the
+             summit. They are formed from explosive eruptions of gas-rich magma, which shatters into pyroclastic fragments known as 
+             cinders or scoria that accumulate around the vent. These eruptions are typically short-lived but can be violent. 
+             Paricutin in Mexico is a famous example, emerging from a cornfield in 1943 and growing rapidly through successive
+              eruptions.</p>
+
+                    </div>
+
+         <div id="section23_strato" class="container-fluid">
+		 <h1>Stratovolcano</h1>
+         <!--<img src="data/strato.jpg" alt="Power image" style="float: right;" class="right" width="500">-->
+         <figure style="float: right;" class="right">
+            <img src="data/images/HTML/strato.jpg" alt="Mount Fuji, Japan" width="500">
+            <figcaption>Mount Fuji, Japan</figcaption>
+        </figure>
+         <p><b>Volcanoes associated with Stratovolcano: Complex volcano and Compound Volcano</b></p> <br>
+		 <p>Stratovolcanoes, also known as composite volcanoes, are tall, symmetrical cones built up by alternating layers of 
+            lava flows, volcanic ash, and other volcanic debris. They are formed by both explosive and effusive eruptions, 
+            with viscous lava flows alternating with pyroclastic flows. 
+            Stratovolcanoes have steep slopes which give them a more triangular shaped compared to Shield Volcanoes. Mount Fuji in Japan and Mount St. Helens in the United States are classic
+             examples of stratovolcanoes.</p>
+
+        </div>
+
+        <div id="section24_caldera" class="container-fluid">
+        <!--<img src="data/caldera.jpg" alt="Power image" style="float: right;" class="right" width="500">-->
+        <figure style="float: right;" class="right">
+            <img src="data/images/HTML/caldera.jpg" alt="Valles Caldera, New Mexico" width="500">
+            <figcaption>Valles Caldera, New Mexico</figcaption>
+        </figure>
+		<h1>Caldera</h1><br>
+		<p>Calderas are large, basin-shaped depressions that form when the summit of a volcano collapses into the emptied magma
+             chamber below during a massive eruption. These eruptions are typically highly explosive, ejecting vast amounts of 
+             volcanic material and leaving behind a large, circular crater. Calderas can be several kilometers in diameter and 
+             may contain smaller volcanic vents or lakes. An example of a caldera would be the Valles Caldera located in northern New Mexico
+            and measures 22 km wide.</p>
+
+        </div>
+
+        <div id="section25_field" class="container-fluid">
+        <!--<img src="data/field.jpg" alt="Power image" style="float: right;" class="right" width="500">-->
+        <figure style="float: right;" class="right">
+            <img src="data/images/HTML/field.jpg" alt="Coso Volcanic Field, California" width="500">
+            <figcaption>Coso Volcanic Field, California</figcaption>
+        </figure>
+		<h1>Volcanic Field</h1>
+        <p><b>Volcanoes associated with Volcanic Field: Crater Rows</b></p> <br>
+		<p>Volcanic fields, also known as volcanic provinces, are areas containing numerous small volcanic centers, 
+            including both cones and fissures, spread across a broad region. They often result from localized volcanic activity 
+            associated with hotspot activity or extensional tectonics. Eruptions within volcanic fields can vary widely in style, 
+            from effusive lava flows to explosive eruptions producing cinder cones or maars (shallow volcanic craters). 
+            The Coso Volcanic Field in California is an example of such a volcanic province.</p>
+
+        </div>
+
+        <div id="section26_sub" class="container-fluid">
+        <!--<img src="data/sub.jpeg" alt="Power image" style="float: right;" class="right" width="500">-->
+        <figure style="float: right;" class="right">
+            <img src="data/images/HTML/sub.jpeg" alt="Hydrothermal Vent" width="500">
+            <figcaption>Hydrothermal Vent</figcaption>
+        </figure>
+		<h1>Submarine Volcano</h1><br>
+		<p>Submarine volcanoes are volcanic vents located underwater, often on the ocean floor. They can form along mid-ocean 
+            ridges, volcanic island chains, or as standalone seamounts. Eruptions at submarine volcanoes can produce pillow 
+            lava formations due to rapid cooling in the cold ocean water. They may also generate hydrothermal vents, which support 
+            unique ecosystems.</p>
+
+        </div>
+
+        <div id="section27_other" class="container-fluid">
+        <!--<img src="data/maar.jpeg" alt="Power image" style="float: right;" class="right" width="500">-->
+        <figure style="float: right;" class="right">
+            <img src="data/images/HTML/maar.jpeg" alt="Alberca de los Espinos, Mexico" width="500">
+            <figcaption>Alberca de los Espinos, Mexico (Maar Volcano)</figcaption>
+        </figure>
+        <h1>Other</h1>
+        <p><b>Other Volcano Types: Maar, Lava Domes, Mud Volcano, etc</b></p>
+        <p>Other volcanoes not associated with the previous deisgnations</p> 
+        <h3>Maar</h3>
+        <p>*Maar info*</p>
+        <h3>Lava Dome</h3>
+        <p>*Lava dome info*</p>
+        <h3>Mud Volcano</h3>
+        <p>*Mud volcano info*</p>
+        </div>
+
+        <div id="section3_danger" class="container-fluid">
+        <h1>Volcanic Danger</h1>
+        <p>*Basic Overview like how many eruptions there are a year, how much damage, how much death, etc. 
+            Probably will copy from/to Final Paper*</p>
+        <h3>Threat by Location</h3>
+        <p>*insert discussion of what areas have a large concentration of volcanoes (high risk)*</p>
+        <h3>Threat by Hazard</h3>
+        <p>*insert text about risk of individual hazards (ash clouds, lahars, lava flows, pyroclastic flows, etc) and what type is associated with which*</p>
+        <p>Example: Shield Volcanoes have little ash but can have long lasting/highly fluid lava flows</p>
+        <p>*Also discuss the Volcanic Explosivity Index (VEI) for classifying the size of an eruption*</p>
+        <br>
+        <h3>Famous Volcanic Eruptions</h3>
+        <br>
+        <figure style="float: right;" class="right">
+            <img src="data/images/HTML/kilauea.jpeg" alt="Kilauea" width="500">
+            <figcaption>Erupting lava fountain in Kilauea</figcaption>
+        </figure>
+        <h4>Kilauea, Hawaii, USA</h4>
+        <p>Type: Shield Volcano</p>
+        <p>VEI: 0-3</p>
+        <p>Date: 1983-2018</p>
+        <p>Death Toll: N/A</p>
+        <p>Info: One of the msot active volcanoes today, Kilauea erupted for 35 years with several small volcanic vents. 
+            The eruption mainly consisted of lava flows with relatively little explosivity. 
+        </p>
+        <br><br><br><br><br><br><br><br>
+        <figure style="float: right;" class="right">
+            <img src="data/images/HTML/vesuvius.jpeg" alt="Vesuvius" width="500">
+            <figcaption>Mount Vesuvius today from Naples, Italy</figcaption>
+        </figure>
+        <h4>Mount Vesuvius, Italy</h4>
+        <p>Type: Stratovolcano</p>
+        <p>VEI: 5</p>
+        <p>Date: 79</p>
+        <p>Death Toll: ~2,000</p>
+        <p>Info: Europes most famous eruption, 
+            the Pyroclastic flows caused by the Volcano destroyed the city of Pompeii.
+        The remains of the city and its inhabitants can be seen today in an ash statue=like appearance</p>
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <figure style="float: right;" class="right">
+            <img src="data/images/HTML/krakatoa.jpeg" alt="Krakatoa" width="500">
+            <figcaption>An artists depiction of Krakatoa erupting</figcaption>
+        </figure>
+        <h4>Krakatoa, Indonesia</h4>
+        <p>Type: Stratovolcano</p>
+        <p>VEI: 6</p>
+        <p>Date: 1883</p>
+        <p>Death Toll: ~36,000</p>
+        <p>Info: The eruption was so massive that most of the island the volcano was located on
+            collapsed into the sea. The most devestating effect was the large tsunamis caused by the collapse of the island 
+            whcih devastated the surrounding areas of Indonesia.
+        </p>
+        <br><br><br><br><br><br>
+        <figure style="float: right;" class="right">
+            <img src="data/images/HTML/helens.jpeg" alt="Mount Saint Helens" width="500">
+            <figcaption>Plume of ash rising out of Mount Siant Helens</figcaption>
+        </figure>
+        <h4>Mount Saint Helens, Washington, USA</h4>
+        <p>Type: Stratovolcano</p>
+        <p>VEI: 5</p>
+        <p>Date: 1980</p>
+        <p>Death Toll: 57</p>
+        <p>Info: Arguably the msot famous eruption in American history. 
+            On May 18, 1980 the northern slope of Mount Saint Helens collapsed,caused a major eruption.
+            The resulting ash cloud rose 24 kilometers into the Stratosphere.
+         </p>
+        <br><br><br><br><br><br><br><br>
+        <figure style="float: right;" class="right">
+            <img src="data/images/HTML/yellowstone.jpeg" alt="Grand Prismatic Spring" width="500">
+            <figcaption>Grand Prismatic Spring, Yellowstone</figcaption>
+        </figure>
+        <h4>Yellowstone National Park, Wyoming, USA</h4>
+        <p>Type: Caldera</p>
+        <p>VEI: 8</p>
+        <p>Date: ~640,000 BC</p>
+        <p>Death Toll: N/A</p>
+        <p>Info: One of the few Super Eruptions recorded, 
+            the eruption was over a thousand times larger than Mount Saint Helens 
+            and its ash cloud covered much of the modern day Untied States.</p>
+        </div>
+
+        <div id="section32_ref" class="container-fluid">
+        <h1>References</h1>
+            </div>
+
+    </body>
+</html>
